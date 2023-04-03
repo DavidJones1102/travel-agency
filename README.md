@@ -1,4 +1,6 @@
-# BiuroTurystyczne
+# Travel agency
+## Information
+Travel agency using Angular and Firebase. Code for my UST Introduction to web applications course.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
