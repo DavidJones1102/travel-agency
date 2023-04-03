@@ -1,0 +1,10 @@
+
+<div id="wrapper">
+    <ng-container *ngFor="let trip of trips; let i = index;">
+        <div class="trip" *ngIf="trip.amountTaken!=0">
+            {{trip.name}}: {{trip.amountTaken}}
+            <div  (click)="buy(i)" class="buy">Kup</div>
+        </div>
+    </ng-container>
+    <p id="summary">Całkowita cena: {{calcPrice()}}zł</p>
+</div>

@@ -1,0 +1,47 @@
+ 
+<form [formGroup] = "addTrip" novalidate >
+    <label for="name">Nazwa wycieczki:</label>
+    <input formControlName="name" type ="text" />
+
+    <label for="country"> Kraj docelowy:</label>
+    <input  formControlName="country" type ="text"/>
+
+    <label for="start">Data wyjazdu:</label>
+    <input formControlName="start" type ="text" />
+
+    <label for="end">Data powrotu:</label>
+    <input  formControlName="end" type ="text" />
+
+    <label for="price">Cena:</label>
+    <input formControlName="price" type ="number"  />
+
+    <label for="amount">Ilość miejsc:</label>
+    <input  formControlName="amount" type ="number" />
+
+    <label for="description">Opis:</label>
+    <input  formControlName="description" type ="text" />
+
+    <label for="photo">scieżka do zdjecia::</label>
+    <input  formControlName="photo" type ="text" />
+
+
+</form>
+<div class="backContainer">
+<button (click)="addTripHandler(
+    name.value,
+    country.value,
+    start.value,
+    end.value,
+    price.value,
+    amount.value,
+    description.value,
+    photo.value
+)" type="submit" [disabled]="addTrip.invalid" class="btn btn-primary">
+    Submit
+</button>
+</div>
+<p *ngIf="addedTrip">{{addedTrip}} added</p>
+<!-- <div class="backContainer"> -->
+    <!-- <div (click)="changeView()"class="button">Wróć</div> -->
+<!-- </div> -->
+

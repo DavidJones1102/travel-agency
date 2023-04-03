@@ -1,0 +1,18 @@
+<div id="container">
+    <p id="sold" *ngIf="trip.amount==trip.amountTaken">Sold Out</p>
+    <span class="name">{{trip.name | uppercase}}</span>
+    <img routerLink="/trip/{{id}}" [src]="trip.photo" alt="zdjecie wycieczki">
+    <div id="details">
+        <span class="country">Kraj: {{trip.country | uppercase}}</span>
+        <span class="date">Data: {{trip.start}} - {{trip.end}}</span>
+        <span class="price">Cena: {{trip.price}}zł</span>
+        <span class="description">Opis: {{trip.description}}</span>
+    </div>
+    <div class="plusAndMinus" [ngStyle]="lowFlag? {'color':'red'}: {'color':'black'}">
+        <i class="bi bi-trash" (click)="removeTrip()"></i>
+        <span *ngIf="trip.amount>trip.amountTaken" class="button" (click)="decrement()">+</span>
+        <span class="amount"> &nbsp;{{trip.amount-trip.amountTaken}}&nbsp;</span>
+        <span *ngIf="trip.amountTaken>0"class="button" (click)="increment()">-</span>
+    </div>
+ 
+</div>

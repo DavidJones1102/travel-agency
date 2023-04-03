@@ -1,0 +1,17 @@
+<div id="container" *ngIf="flag">
+    <p id="reserved" [ngClass]="{'under10' : reserved<10, 'over10' : reserved>=10}">
+        Zarezerwowane wycieczki: {{countReserved()}}
+    </p>
+
+    <app-trip 
+    *ngFor="let trip of trips ; let i = index;"
+     
+    [ngClass]="{'cheap' : minPrice(i), 'expensive' : maxPrice(i)}"
+    [trip]="trip"
+    [key]="tripsId[i]"
+    [id]="i"
+    [(reserved)]="reserved"
+    (remove)="removeTrip($event)"> </app-trip>
+   
+</div>
+

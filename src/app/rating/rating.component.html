@@ -1,0 +1,9 @@
+
+<i *ngFor="let star of stars;let i=index"
+ class="bi"
+ [ngClass]="{'bi-star': i>temporaryRating, 'bi-star-fill': i<=temporaryRating}"
+ (mouseenter)="notRated && count(i)"
+ (mouseout)="notRated && count(-1)"
+ (click)="notRated && rate(i)"></i>
+ <span>{{avgRate}}</span>
+

@@ -1,0 +1,21 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(53, 106, 153);
+    justify-content: center;
+    gap: 30px;
+}
+.menuItem{
+    margin: 10px;
+    padding:10px;
+    font-size: 40px;
+    color: white;
+}
+.menuItem:hover{
+    background-color: rgb(42, 84, 121);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

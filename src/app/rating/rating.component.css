@@ -1,0 +1,12 @@
+i{
+    font-size: 30px;
+    color: goldenrod;
+    padding: 2px;
+}
+i:hover{
+    cursor: pointer;
+}
+span{
+    padding-left: 4px;
+    font-size: 30px;
+}

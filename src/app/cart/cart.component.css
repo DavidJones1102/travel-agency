@@ -1,0 +1,32 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trip{
+    display: flex;
+    width: 50vw;
+    gap:20px;
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 4px 1px rgb(137, 133, 133);
+    border-radius: 10px;
+}
+
+.buy{
+    margin-left: auto;
+    padding:10px;
+    font-size: 40px;
+    color: white;
+    background-color: brown;
+}
+    
+.buy:hover{
+    background-color: rgb(138, 36, 36);
+    cursor: pointer;
+}
+
+#summary{
+    font-size: 60px;
+}
